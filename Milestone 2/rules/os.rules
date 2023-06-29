@@ -1,0 +1,1 @@
+alert tcp any any -> [23.214.219.128/25,192.168.10.0/24] any (msg:"Nmap Xmas scan detected"; flags:FPU; reference:url,nmap.org; classtype:attempted-recon; sid:1000005; rev:1;)

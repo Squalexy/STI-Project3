@@ -1,0 +1,4 @@
+alert tcp any any -> [23.214.219.128/25,192.168.10.0/24] any (msg:"SQL Injection - Simple UNION"; content:"union"; nocase; classtype:web-application-attack; sid:1000001; rev:1; tag:session, 1, packets;)
+
+alert tcp any any -> [23.214.219.128/25,192.168.10.0/24] any (msg:"SQL Injection - DROP TABLE Attempt"; flow:established,to_server; content:"DROP"; nocase; content:"TABLE"; nocase;  classtype:web-application-attack; sid:1000003; rev:1; tag:session, 1, packets;)
+
